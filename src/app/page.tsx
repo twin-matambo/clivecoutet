@@ -287,8 +287,11 @@ function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "", service: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    formData.append("form-name", "contact");
+    await fetch("/", { method: "POST", body: formData });
     setSubmitted(true);
   };
 
@@ -313,7 +316,8 @@ function Contact() {
             <p className="text-[#151515]/60">We'll get back to you within 24 hours.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} name="contact" data-netlify="true" className="space-y-6">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
@@ -376,10 +380,7 @@ function Contact() {
         )}
 
         <div className="mt-16 text-center">
-          <p className="text-[#151515]/60 mb-4">Or reach out directly</p>
-          <a href="mailto:clive@clivecoutet.com" className="text-lg font-semibold gradient-text hover:opacity-80 transition">
-            clive@clivecoutet.com
-          </a>
+          <p className="text-sm text-[#151515]/40">We respond within 24 hours.</p>
         </div>
       </div>
     </section>
