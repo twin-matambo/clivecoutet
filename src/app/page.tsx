@@ -184,6 +184,14 @@ function Services() {
       title: "Content Creation",
       description: "Full-funnel content strategy and production for brands that want to show up and be remembered.",
     },
+    {
+      title: "Website Design & Development",
+      description: "Custom websites built to perform — from landing pages to full brand sites, designed to convert and built to last.",
+    },
+    {
+      title: "Graphic Design",
+      description: "Visual design that speaks before you do. From social graphics to print collateral, we make every touchpoint count.",
+    },
   ];
 
   return (
