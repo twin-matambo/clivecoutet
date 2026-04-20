@@ -81,7 +81,7 @@ netlify deploy --prod --dir=.next
 - 📱 Fully responsive (mobile-first)
 - 🎨 Brand gradient on key elements
 - ⚡ Smooth scroll navigation
-- 📝 Contact form with service selection
+- 📝 Netlify Forms contact form with service dropdown → emails to `clive@thisiskreative.io`
 - 🎭 Bold typography with Inter font
 - 🖼️ Portfolio grid with hover effects
 
@@ -94,11 +94,26 @@ netlify deploy --prod --dir=.next
 5. **Contact** — Form with service dropdown
 6. **Footer** — Social links and copyright
 
+## 📧 Contact Form Setup (Netlify Forms)
+
+The contact form is powered by **Netlify Forms** and sends submissions to `clive@thisiskreative.io`.
+
+**To enable email notifications:**
+1. Go to **Netlify Dashboard** → select the `clivecoutet` site
+2. Navigate to **Forms** → you should see the "contact" form listed
+3. Click **Form notifications** → **Add notification** → **Email notification**
+4. Set:
+   - **Email to:** `clive@thisiskreative.io`
+   - **Subject:** `New enquiry from THIS IS KREATIVE`
+5. Save. Form submissions will now email you directly.
+
+**Note:** Netlify auto-detects forms from the HTML during deploy — no extra config needed in the code.
+
 ## 📧 Contact
 
 - **Owner:** Clive Coutet
-- **Phone:** +1 530 557 9451
-- **Domain:** clivecoutet.netlify.app
+- **Email:** `clive@thisiskreative.io` (form submissions only — not publicly displayed)
+- **Domain:** `clivecoutet.netlify.app`
 
 ---
 
