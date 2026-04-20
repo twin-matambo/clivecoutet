@@ -371,6 +371,8 @@ function Contact() {
                 <option value="podcast">Podcast Setup & Creation</option>
                 <option value="video">Promotional Videos</option>
                 <option value="content">Content Creation</option>
+                <option value="webdev">Website Design &amp; Development</option>
+                <option value="graphic">Graphic Design</option>
               </select>
             </div>
             <div>
