@@ -289,9 +289,14 @@ function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    formData.append("form-name", "contact");
-    await fetch("/", { method: "POST", body: formData });
+    const data = new URLSearchParams({
+      "form-name": "contact",
+      name: form.name,
+      email: form.email,
+      service: form.service,
+      message: form.message,
+    });
+    await fetch("/", { method: "POST", body: data.toString(), headers: { "Content-Type": "application/x-www-form-urlencoded" } });
     setSubmitted(true);
   };
 
