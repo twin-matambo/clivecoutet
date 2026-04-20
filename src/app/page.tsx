@@ -318,6 +318,7 @@ function Contact() {
         ) : (
           <form onSubmit={handleSubmit} name="contact" data-netlify="true" className="space-y-6">
             <input type="hidden" name="form-name" value="contact" />
+            <p style={{display:"none"}}><label>Don’t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
