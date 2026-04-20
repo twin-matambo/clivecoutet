@@ -227,36 +227,42 @@ function Portfolio() {
       category: "Branding & Content",
       tagline: "Amplifying a global humanitarian mission through bold visual identity and storytelling",
       color: "bg-gradient-to-br from-[#E31853] to-[#EF5B5A]",
+      logo: "/portfolio-logos/adra.png",
     },
     {
       name: "ASI",
       category: "Social Media",
       tagline: "Building a stronger digital presence for Adventist professionals nationwide",
       color: "bg-gradient-to-br from-[#F48C60] to-[#FFC25F]",
+      logo: "/portfolio-logos/asi.png",
     },
     {
       name: "Lineage Journey",
       category: "Branding & Video",
       tagline: "Crafting a brand identity and video content that brings family history to life",
       color: "bg-gradient-to-br from-[#EF5B5A] to-[#F48C60]",
+      logo: "/portfolio-logos/lineage.png",
     },
     {
       name: "Luminate",
       category: "Podcast & Content",
       tagline: "End-to-end podcast production for a top-rated Christian audio experience",
       color: "bg-gradient-to-br from-[#E31853] to-[#FFC25F]",
+      logo: "/portfolio-logos/luminate.png",
     },
     {
       name: "Beautiful Minds Wellness",
       category: "Branding",
       tagline: "A rebrand that captures the heart of compassionate mental health care",
       color: "bg-gradient-to-br from-[#F48C60] to-[#FFC25F]",
+      logo: "/portfolio-logos/beautifulminds.png",
     },
     {
       name: "Paramount Pools",
       category: "Social Media",
       tagline: "Growing a California pool company's reach through targeted social content",
       color: "bg-gradient-to-br from-[#E31853] to-[#EF5B5A]",
+      logo: "/portfolio-logos/paramount.png",
     },
   ];
 
@@ -271,15 +277,20 @@ function Portfolio() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-square"
+              className="group relative overflow-hidden rounded-2xl aspect-square flex flex-col"
             >
               <div className={`absolute inset-0 ${project.color} opacity-90`} />
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                <span className="text-xs font-semibold tracking-wider uppercase opacity-80 mb-2">{project.category}</span>
-                <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
-                <p className="text-sm opacity-90">{project.tagline}</p>
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-white">
+                <img
+                  src={project.logo}
+                  alt={`${project.name} logo`}
+                  className="w-16 h-16 object-contain mb-4 brightness-0 invert"
+                />
+                <span className="text-xs font-semibold tracking-wider uppercase opacity-80 mb-1">{project.category}</span>
+                <h3 className="text-xl font-bold mb-1 text-center">{project.name}</h3>
+                <p className="text-xs opacity-90 text-center leading-tight">{project.tagline}</p>
               </div>
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
