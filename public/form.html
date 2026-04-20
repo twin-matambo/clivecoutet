@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — THIS IS KREATIVE</title>
+</head>
+<body>
+  <!-- Netlify Forms detection page - not visible to users -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" method="POST" style="display:none;">
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+    <p><label>Name: <input type="text" name="name" required /></label></p>
+    <p><label>Email: <input type="email" name="email" required /></label></p>
+    <p><label>Service: <select name="service"><option value="">Select a service</option><option value="organic">Organic Social Media</option><option value="paid">Paid Social Media</option><option value="branding">Branding</option><option value="editing">Editing</option><option value="podcast">Podcast Setup &amp; Creation</option><option value="video">Promotional Videos</option><option value="content">Content Creation</option></select></label></p>
+    <p><label>Message: <textarea name="message" rows="5" required></textarea></label></p>
+    <p><button type="submit">Send Message</button></p>
+  </form>
+</body>
+</html>
