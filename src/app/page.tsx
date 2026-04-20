@@ -16,7 +16,7 @@ function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <span className="text-lg font-bold tracking-tight text-[#151515]">THIS IS</span>
@@ -72,18 +72,18 @@ function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-24 pb-16">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-sm font-semibold tracking-widest text-[#151515]/60 uppercase mb-6">Creative Agency</p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mb-8">
+        <p className="text-xs font-semibold tracking-[0.3em] text-[#151515]/50 uppercase mb-6">Creative Agency</p>
+        <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-black tracking-tight leading-[1] mb-8">
           We build brands that <GradientText>move culture</GradientText>.
         </h1>
-        <p className="text-xl md:text-2xl text-[#151515]/60 font-light max-w-2xl mx-auto mb-12">
+        <p className="text-lg md:text-xl text-[#151515]/55 font-light max-w-xl mx-auto mb-12 leading-relaxed">
           Strategy, design, and content that helps ambitious brands show up bold and stay remembered.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#work" className="px-8 py-4 text-base font-semibold text-white gradient-bg rounded-full hover:opacity-90 transition">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+          <a href="#work" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white gradient-bg rounded-full hover:opacity-90 transition w-full sm:w-auto">
             See Our Work
           </a>
-          <a href="#contact" className="px-8 py-4 text-base font-semibold text-[#151515] border-2 border-[#151515] rounded-full hover:bg-[#151515] hover:text-white transition">
+          <a href="#contact" className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold gradient-text border-2 border-current rounded-full hover:opacity-80 transition w-full sm:w-auto">
             Get in Touch
           </a>
         </div>
